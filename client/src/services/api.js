@@ -131,6 +131,9 @@ export const authService = {
     const user = localStorage.getItem('user');
     return user ? JSON.parse(user) : null;
   },
+
+  // Update profile
+  updateProfile: (data) => api.put('/auth/profile', data),
 };
 
-export default api; 
+export default api;
